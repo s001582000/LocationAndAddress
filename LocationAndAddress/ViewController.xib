@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="LocationAndAddress" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="xZc-A6-FNg" id="iEs-Hz-Csh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xZc-A6-FNg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="URd-z7-cN5"/>
+                    </connections>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE2-5w-PKO">
+                    <rect key="frame" x="0.0" y="607" width="124.5" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="ZJ5-pB-szC"/>
+                    </constraints>
+                    <state key="normal" title="台北"/>
+                    <connections>
+                        <action selector="btnOnClick:" destination="-1" eventType="touchUpInside" id="U5y-MN-V99"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHW-z6-SEh">
+                    <rect key="frame" x="124.5" y="607" width="125.5" height="60"/>
+                    <state key="normal" title="台中"/>
+                    <connections>
+                        <action selector="btnOnClick:" destination="-1" eventType="touchUpInside" id="xDi-7c-Vxj"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0w-GQ-xO9">
+                    <rect key="frame" x="250" y="607" width="125" height="60"/>
+                    <state key="normal" title="高雄"/>
+                    <connections>
+                        <action selector="btnOnClick:" destination="-1" eventType="touchUpInside" id="F7W-QB-qWV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="L0w-GQ-xO9" firstAttribute="centerY" secondItem="VHW-z6-SEh" secondAttribute="centerY" id="5Dj-kS-o0f"/>
+                <constraint firstItem="xZc-A6-FNg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8Pv-hw-vbI"/>
+                <constraint firstAttribute="trailing" secondItem="xZc-A6-FNg" secondAttribute="trailing" id="AQh-0y-qqv"/>
+                <constraint firstItem="L0w-GQ-xO9" firstAttribute="width" secondItem="VHW-z6-SEh" secondAttribute="width" id="Ah2-9b-10y"/>
+                <constraint firstItem="VHW-z6-SEh" firstAttribute="leading" secondItem="CE2-5w-PKO" secondAttribute="trailing" id="DNR-9M-pBl"/>
+                <constraint firstItem="xZc-A6-FNg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FfP-mm-V7d"/>
+                <constraint firstItem="CE2-5w-PKO" firstAttribute="top" secondItem="xZc-A6-FNg" secondAttribute="bottom" id="Gnt-s8-YIs"/>
+                <constraint firstAttribute="trailing" secondItem="L0w-GQ-xO9" secondAttribute="trailing" id="Wee-Cy-U5Y"/>
+                <constraint firstItem="VHW-z6-SEh" firstAttribute="height" secondItem="CE2-5w-PKO" secondAttribute="height" id="dc6-8w-dnt"/>
+                <constraint firstItem="CE2-5w-PKO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gNZ-o5-Vbz"/>
+                <constraint firstItem="VHW-z6-SEh" firstAttribute="centerY" secondItem="CE2-5w-PKO" secondAttribute="centerY" id="ikM-fl-CcH"/>
+                <constraint firstAttribute="bottom" secondItem="CE2-5w-PKO" secondAttribute="bottom" id="jsr-3d-WV1"/>
+                <constraint firstItem="L0w-GQ-xO9" firstAttribute="leading" secondItem="VHW-z6-SEh" secondAttribute="trailing" id="qGa-r1-6EZ"/>
+                <constraint firstItem="L0w-GQ-xO9" firstAttribute="height" secondItem="VHW-z6-SEh" secondAttribute="height" id="uQR-wS-8IB"/>
+                <constraint firstItem="VHW-z6-SEh" firstAttribute="width" secondItem="CE2-5w-PKO" secondAttribute="width" id="x1N-6q-tpB"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
